@@ -9,6 +9,8 @@ Operate a Shielded Expedition-compatible Osmosis testnet relayer
 Created channel:  
 Namada SE    <->  Osmosis osmo-test-5  
 channel-337  <->  channel-5847
+https://testnet.mintscan.io/osmosis-testnet/txs/C4D7BEF054B54A8CB1E654EEA5460B27FFC18A2BB8A7E1215E4C2C4A0BA59C62?height=5586990  
+https://testnet.mintscan.io/osmosis-testnet/txs/9B37DB3795398DC5EC63813E0C05F694D8F0B5E66746BB358993E117521E9BC9?height=5587468  
 
 SE account:  
 _tpknam1qzyh9jt3edn04rha3d68yc0c2zzcjgppa5gx5l78rmf626eqypvxz7trv69_  
