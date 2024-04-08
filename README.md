@@ -2,26 +2,35 @@
 
 **RPC, Peers, Seed, Addrbook, Genesis**
 
-#### Stop the service and reset the data
+Public RPC: 
+<pre style="background:black;color:white"><code id="code1">
+https://namada-se.staking_power.com/
+</code></pre>
 
-<pre><code id="code1">sudo systemctl stop namada.service
-cp $HOME/.local/share/namada/shielded-expedition.88f17d1d14/cometbft/data/priv_validator_state.json $HOME/.local/share/namada/shielded-expedition.88f17d1d14/cometbft/data $HOME/.local/share/namada
-rm -rf $HOME/.local/share/namada/shielded-expedition.88f17d1d14/cometbft/data</code></pre>
-<button style="background:#3630a3;color:white;border-radius:6px" onclick="copyToClipboard('#code1')">Copy</button>
+Indexer Service: 
+<pre style="background:black;color:white"><code id="code1">
+https://indexer.staking_power.com/
+</code></pre>
 
-#### Download latest snapshot
+Genesis:
+<pre style="background:black;color:white"><code id="code1">
+https://files.somewhere.com/genesis.json
+</code></pre>
 
-Take the latest you need from [Snapshots](Snapshots)
+Seed:
+<pre style="background:black;color:white"><code id="code1">
+tcp://ip:port
+</code></pre>
 
-<pre><code id="code2">link="&lt;above link&gt;"
-curl -L $link | tar -I lz4 -xf - -C $HOME/.local/share/namada/shielded-expedition.88f17d1d14
-mv $HOME/.local/share/namada/shielded-expedition.88f17d1d14/priv_validator_state.json.bac $HOME/.local/share/namada/shielded-expedition.88f17d1d14/priv_validator_state.json</code></pre>
-<button onclick="copyToClipboard('#code2')">Copy</button>
+Peer:
+<pre style="background:black;color:white"><code id="code1">
+tcp://ip:port
+</code></pre>
 
-#### Restart the service and check the log
-
-<pre><code id="code3">sudo systemctl start namada.service && sudo journalctl -u namada.service -fn 100 -o cat</code></pre>
-<button onclick="copyToClipboard('#code3')">Copy</button>
+Snapshot:
+<pre style="background:black;color:white"><code id="code1">
+https://files.somewhere.com/namada-snapshot.tar.gz
+</code></pre>
 
 **Node Setup**
 
