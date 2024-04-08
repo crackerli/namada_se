@@ -1,1 +1,4 @@
-theme: jekyll-theme-hamilton
+plugins:
+  - jekyll-remote-theme
+  
+remote-theme: ngzhio/jekyll-theme-hamilton
