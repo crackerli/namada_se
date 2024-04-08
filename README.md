@@ -1,38 +1,38 @@
 # Namada services
 
-**RPC, Peers, Seed, Addrbook, Genesis**
+## RPC, Peers, Seed, Addrbook, Genesis
 
-Public RPC: 
+#### Public RPC: 
 <pre style="background:black;color:white"><code id="code_rpc">
 https://namada-se.staking_power.com/
 </code></pre>
 
-Indexer Service: 
+#### Indexer Service: 
 <pre style="background:black;color:white"><code id="code_indexer">
 https://indexer.staking_power.com/
 </code></pre>
 
-Genesis:
+#### Genesis:
 <pre style="background:black;color:white"><code id="code_genesis">
 https://files.somewhere.com/genesis.json
 </code></pre>
 
-Seed:
+#### Seed:
 <pre style="background:black;color:white"><code id="code_seed">
 tcp://ip:port
 </code></pre>
 
-Peer:
+#### Peer:
 <pre style="background:black;color:white"><code id="code_peer">
 tcp://ip:port
 </code></pre>
 
-Snapshot:
+#### Snapshot:
 <pre style="background:black;color:white"><code id="code_snapshot">
 https://files.somewhere.com/namada-snapshot.tar.gz
 </code></pre>
 
-**Node Setup**
+## Node Setup
 #### Install Pre-requisites software
 
 <pre><code id="code1">
