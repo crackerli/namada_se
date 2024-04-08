@@ -28,12 +28,12 @@ sudo ufw enable
 vi ~/.bash_profile
 export PATH=$HOME/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/local/go/bin:$HOME/go/bin  
 export BASE_DIR=$HOME/.local/share/namada  
-export NAMADA_TAG="<Namada Release Tag>"    
+export NAMADA_TAG="Namada Release Tag"    
 export TM_HASH=v0.1.4-abciplus  
 export CHAIN_ID="public-testnet-15.0dacadb8d663"  
-export PUBLIC_IP="<PUBLIC IP>"  
-export IP_PORT="<PUBLIC IP>:26656"  
-export VALIDATOR_ALIAS="<VALIDATOR MONIKER>"  
+export PUBLIC_IP="PUBLIC IP"
+export IP_PORT="PUBLIC IP:26656"  
+export VALIDATOR_ALIAS="VALIDATOR MONIKER"  
 . "$HOME/.cargo/env"
 source ~/.bash_profile
 </code></pre>
