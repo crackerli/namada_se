@@ -67,6 +67,31 @@ Namada v0.28.2
 </code></pre>
 <button style="background:#3630a3;color:white" onclick="copyToClipboard('#code6')">Copy</button>
 
+#### Copy pre-genesis folder to $BASE_DIR
+<pre><code id="code7">
+mkdir -p $BASE_DIR
+sudo cp -r ~/pre-genesis $BASE_DIR
+</code></pre>
+<button style="background:#3630a3;color:white" onclick="copyToClipboard('#code7')">Copy</button>
+
+#### Join network
+<pre><code id="code8">
+cd $HOME && namadac utils join-network --chain-id $CHAIN_ID --genesis-validator $VALIDATOR_ALIAS
+</code></pre>
+<button style="background:#3630a3;color:white" onclick="copyToClipboard('#code8')">Copy</button>
+
+#### Modify $BASE_DIR/$CHAIN_ID/config.toml
+<pre><code id="code9">
+[ledger.cometbft.rpc]
+laddr = "tcp://0.0.0.0:26657"
+[ledger.cometbft.instrumentation]
+prometheus = true
+prometheus_listen_addr = ":26660"
+[ledger.cometbft]
+moniker = "<your-moniker-name>"
+</code></pre>
+<button style="background:#3630a3;color:white" onclick="copyToClipboard('#code9')">Copy</button>
+
 **RPC, Peers, Seed, Addrbook, Genesis**
 
 #### Stop the service and reset the data
