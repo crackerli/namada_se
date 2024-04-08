@@ -39,6 +39,34 @@ source ~/.bash_profile
 </code></pre>
 <button style="background:#3630a3;color:white" onclick="copyToClipboard('#code3')">Copy</button>
 
+#### Build from source code
+Build namada and copy to /usr/local/bin
+<pre><code id="code4">
+rm -rf $HOME/namada
+cd $HOME && git clone https://github.com/anoma/namada && cd namada && git checkout $NAMADA_TAG
+make build-release
+
+cd $HOME && sudo cp "$HOME/namada/target/release/namada" /usr/local/bin/namada && sudo cp "$HOME/namada/target/release/namadac" /usr/local/bin/namadac && sudo cp "$HOME/namada/target/release/namadan" /usr/local/bin/namadan && sudo cp "$HOME/namada/target/release/namadaw" /usr/local/bin/namadaw && sudo cp "$HOME/namada/target/release/namadar" /usr/local/bin/namadar
+</code></pre>
+<button style="background:#3630a3;color:white" onclick="copyToClipboard('#code4')">Copy</button>
+
+Install consensus cometbft
+<pre><code id="code5">
+wget https://github.com/cometbft/cometbft/releases/download/v0.37.2/cometbft_0.37.2_linux_amd64.tar.gz
+tar -xvf cometbft_0.37.2_linux_amd64.tar.gz
+sudo cp cometbft /usr/local/bin/
+</code></pre>
+<button style="background:#3630a3;color:white" onclick="copyToClipboard('#code5')">Copy</button>
+
+Verify version
+<pre><code id="code6">
+cometbft version
+0.37.2
+namada --version
+Namada v0.28.2
+</code></pre>
+<button style="background:#3630a3;color:white" onclick="copyToClipboard('#code6')">Copy</button>
+
 **RPC, Peers, Seed, Addrbook, Genesis**
 
 #### Stop the service and reset the data
