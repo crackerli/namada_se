@@ -33,7 +33,6 @@ https://files.somewhere.com/namada-snapshot.tar.gz
 </code></pre>
 
 **Node Setup**
-
 #### Install Pre-requisites software
 
 <pre><code id="code1">
