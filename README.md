@@ -35,6 +35,13 @@ https://files.somewhere.com/namada-snapshot.tar.gz
 ## Node Setup
 #### Install Pre-requisites software
 
+```
+sudo apt update -y  
+sudo apt-get install -y make git-core libssl-dev pkg-config libclang-12-dev build-essential protobuf-compiler libudev-dev  
+sudo curl https://sh.rustup.rs -sSf | sh -s -- -y  
+. $HOME/.cargo/env
+```
+
 <pre><code id="code1">
 sudo apt update -y  
 sudo apt-get install -y make git-core libssl-dev pkg-config libclang-12-dev build-essential protobuf-compiler libudev-dev  
