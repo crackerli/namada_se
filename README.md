@@ -3,9 +3,9 @@
 ## RPC, Peers, Seed, Addrbook, Genesis
 
 #### Public RPC: 
-<pre style="background:black;color:white"><code id="code_rpc">
+<p style="background:black;color:white;padding:10px;border-radius:6px">
 https://namada-se.staking_power.com/
-</code></pre>
+</p>
 
 #### Indexer Service: 
 <pre style="background:black;color:white"><code id="code_indexer">
