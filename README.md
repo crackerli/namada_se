@@ -4,33 +4,33 @@
 
 #### Public RPC: 
 <p style="background:black;color:white;padding:10px;border-radius:6px">
-[https://namada-se.staking_power.com/](https://namada-se.staking_power.com/)
+https://namada-se.staking_power.com/
 </p>
 
 #### Indexer Service: 
 <p style="background:black;color:white;padding:10px;border-radius:6px">
-[https://indexer.staking_power.com/](https://indexer.staking_power.com/)
+https://indexer.staking_power.com/
 </p>
 
 #### Genesis:
-<pre style="background:black;color:white"><code id="code_genesis">
+<p style="background:black;color:white;padding:10px;border-radius:6px">
 https://files.somewhere.com/genesis.json
-</code></pre>
+</p>
 
 #### Seed:
-<pre style="background:black;color:white"><code id="code_seed">
+<p style="background:black;color:white;padding:10px;border-radius:6px">
 tcp://ip:port
-</code></pre>
+</p>
 
 #### Peer:
-<pre style="background:black;color:white"><code id="code_peer">
+<p style="background:black;color:white;padding:10px;border-radius:6px">
 tcp://ip:port
-</code></pre>
+</p>
 
 #### Snapshot:
-<pre style="background:black;color:white"><code id="code_snapshot">
+<p style="background:black;color:white;padding:10px;border-radius:6px">
 https://files.somewhere.com/namada-snapshot.tar.gz
-</code></pre>
+</p>
 
 ## Node Setup
 #### Install Pre-requisites software
