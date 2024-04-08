@@ -92,6 +92,57 @@ moniker = "your-moniker-name"
 </code></pre>
 <button style="background:#3630a3;color:white" onclick="copyToClipboard('#code9')">Copy</button>
 
+#### Create and launch service
+sudo vi /etc/systemd/system/namadad.service
+<pre><code id="code10">
+[Unit]
+Description=namada
+After=network-online.target
+
+[Service]
+User=namadanet
+WorkingDirectory=/home/namadanet/.local/share/namada
+Environment="NAMADA_LOG=info"
+Environment="CMT_LOG_LEVEL=p2p:none,pex:error"
+Environment="NAMADA_CMT_STDOUT=true"
+ExecStart=/usr/local/bin/namada --base-dir=/home/namadanet/.local/share/namada node ledger run  
+StandardOutput=syslog
+StandardError=syslog
+Restart=on-failure
+RestartSec=3
+LimitNOFILE=65535
+
+[Install]
+WantedBy=multi-user.target
+</code></pre>
+<button style="background:#3630a3;color:white" onclick="copyToClipboard('#code10')">Copy</button>
+
+<pre><code id="code11">
+sudo chmod 755 /etc/systemd/system/namadad.service  
+sudo systemctl daemon-reload  
+sudo systemctl enable namadad  
+sudo systemctl start namadad && sudo journalctl -u namadad -n 1000 -f
+</code></pre>
+<button style="background:#3630a3;color:white" onclick="copyToClipboard('#code11')">Copy</button>
+
+#### Check status
+<pre><code id="code12">
+curl -s localhost:26657/status | jq .  
+namadac find-validator --tm-address=$(curl -s localhost:26657/status | jq -r .result.validator_info.address)  
+namadac validator-state --validator <validator address>
+</code></pre>
+<button style="background:#3630a3;color:white" onclick="copyToClipboard('#code12')">Copy</button>
+
+#### Service operations
+<pre><code id="code13">
+sudo service namadad start  
+sudo service namadad status  
+sudo service namadad stop   
+sudo service namadad restart  
+sudo journalctl -u namadad -n 1000 -f | grep "height"
+</code></pre>
+<button style="background:#3630a3;color:white" onclick="copyToClipboard('#code13')">Copy</button>
+
 **RPC, Peers, Seed, Addrbook, Genesis**
 
 #### Stop the service and reset the data
