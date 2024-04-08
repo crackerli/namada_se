@@ -80,7 +80,7 @@ cd $HOME && namadac utils join-network --chain-id $CHAIN_ID --genesis-validator 
 </code></pre>
 <button style="background:#3630a3;color:white" onclick="copyToClipboard('#code8')">Copy</button>
 
-#### Modify "BASE_DIR"/"CHAIN_ID"/config.toml
+#### Modify $BASE_DIR/$CHAIN_ID/config.toml
 <pre><code id="code9">
 [ledger.cometbft.rpc]
 laddr = "tcp://0.0.0.0:26657"
@@ -88,7 +88,7 @@ laddr = "tcp://0.0.0.0:26657"
 prometheus = true
 prometheus_listen_addr = ":26660"
 [ledger.cometbft]
-moniker = "<your-moniker-name>"
+moniker = "your-moniker-name"
 </code></pre>
 <button style="background:#3630a3;color:white" onclick="copyToClipboard('#code9')">Copy</button>
 
