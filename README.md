@@ -129,7 +129,7 @@ sudo systemctl start namadad && sudo journalctl -u namadad -n 1000 -f
 <pre><code id="code12">
 curl -s localhost:26657/status | jq .  
 namadac find-validator --tm-address=$(curl -s localhost:26657/status | jq -r .result.validator_info.address)  
-namadac validator-state --validator <validator address>
+namadac validator-state --validator "validator address"
 </code></pre>
 <button style="background:#3630a3;color:white" onclick="copyToClipboard('#code12')">Copy</button>
 
