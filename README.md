@@ -1,5 +1,28 @@
 # Namada services
 
+**RPC, Peers, Seed, Addrbook, Genesis**
+
+#### Stop the service and reset the data
+
+<pre><code id="code1">sudo systemctl stop namada.service
+cp $HOME/.local/share/namada/shielded-expedition.88f17d1d14/cometbft/data/priv_validator_state.json $HOME/.local/share/namada/shielded-expedition.88f17d1d14/cometbft/data $HOME/.local/share/namada
+rm -rf $HOME/.local/share/namada/shielded-expedition.88f17d1d14/cometbft/data</code></pre>
+<button style="background:#3630a3;color:white;border-radius:6px" onclick="copyToClipboard('#code1')">Copy</button>
+
+#### Download latest snapshot
+
+Take the latest you need from [Snapshots](Snapshots)
+
+<pre><code id="code2">link="&lt;above link&gt;"
+curl -L $link | tar -I lz4 -xf - -C $HOME/.local/share/namada/shielded-expedition.88f17d1d14
+mv $HOME/.local/share/namada/shielded-expedition.88f17d1d14/priv_validator_state.json.bac $HOME/.local/share/namada/shielded-expedition.88f17d1d14/priv_validator_state.json</code></pre>
+<button onclick="copyToClipboard('#code2')">Copy</button>
+
+#### Restart the service and check the log
+
+<pre><code id="code3">sudo systemctl start namada.service && sudo journalctl -u namada.service -fn 100 -o cat</code></pre>
+<button onclick="copyToClipboard('#code3')">Copy</button>
+
 **Node Setup**
 
 #### Install Pre-requisites software
@@ -142,29 +165,6 @@ sudo service namadad restart
 sudo journalctl -u namadad -n 1000 -f | grep "height"
 </code></pre>
 <button style="background:#3630a3;color:white;border-radius:6px" onclick="copyToClipboard('#code13')">Copy</button>
-
-**RPC, Peers, Seed, Addrbook, Genesis**
-
-#### Stop the service and reset the data
-
-<pre><code id="code1">sudo systemctl stop namada.service
-cp $HOME/.local/share/namada/shielded-expedition.88f17d1d14/cometbft/data/priv_validator_state.json $HOME/.local/share/namada/shielded-expedition.88f17d1d14/cometbft/data $HOME/.local/share/namada
-rm -rf $HOME/.local/share/namada/shielded-expedition.88f17d1d14/cometbft/data</code></pre>
-<button style="background:#3630a3;color:white;border-radius:6px" onclick="copyToClipboard('#code1')">Copy</button>
-
-#### Download latest snapshot
-
-Take the latest you need from [Snapshots](Snapshots)
-
-<pre><code id="code2">link="&lt;above link&gt;"
-curl -L $link | tar -I lz4 -xf - -C $HOME/.local/share/namada/shielded-expedition.88f17d1d14
-mv $HOME/.local/share/namada/shielded-expedition.88f17d1d14/priv_validator_state.json.bac $HOME/.local/share/namada/shielded-expedition.88f17d1d14/priv_validator_state.json</code></pre>
-<button onclick="copyToClipboard('#code2')">Copy</button>
-
-#### Restart the service and check the log
-
-<pre><code id="code3">sudo systemctl start namada.service && sudo journalctl -u namada.service -fn 100 -o cat</code></pre>
-<button onclick="copyToClipboard('#code3')">Copy</button>
 
 <script>
 function copyToClipboard(element) {
