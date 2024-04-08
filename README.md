@@ -4,13 +4,13 @@
 
 #### Public RPC: 
 <p style="background:black;color:white;padding:10px;border-radius:6px">
-https://namada-se.staking_power.com/
+[https://namada-se.staking_power.com/](https://namada-se.staking_power.com/)
 </p>
 
 #### Indexer Service: 
-<pre style="background:black;color:white"><code id="code_indexer">
-https://indexer.staking_power.com/
-</code></pre>
+<p style="background:black;color:white;padding:10px;border-radius:6px">
+[https://indexer.staking_power.com/](https://indexer.staking_power.com/)
+</p>
 
 #### Genesis:
 <pre style="background:black;color:white"><code id="code_genesis">
