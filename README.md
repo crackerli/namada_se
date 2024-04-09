@@ -82,15 +82,15 @@ tcp://ip:port
 ### Snapshot:
 #### Stop the service and reset the data
 <p style="background:black;color:white;padding:10px;border-radius:6px">
-sudo systemctl stop namada.service
-cp $HOME/.local/share/namada/shielded-expedition.88f17d1d14/cometbft/data/priv_validator_state.json $HOME/.local/share/namada/shielded-expedition.88f17d1d14/priv_validator_state.json.backup
-rm -rf $HOME/.local/share/namada/shielded-expedition.88f17d1d14/cometbft/data $HOME/.local/share/namada/shielded-expedition.88f17d1d14/db $HOME/.local/share/namada/shielded-expedition.88f17d1d14/wasm
+sudo systemctl stop namada.service<br />
+cp $BASE_DIR/$CHAIN_ID/cometbft/data/priv_validator_state.json $BASE_DIR/$CHAIN_ID/priv_validator_state.json.backup<br />
+rm -rf $BASE_DIR/$CHAIN_ID/cometbft/data $BASE_DIR/$CHAIN_ID/db $BASE_DIR/$CHAIN_ID/wasm
 </p>
 
 #### Download latest snapshot
 <p style="background:black;color:white;padding:10px;border-radius:6px">
-wget -P $BASE_DIR/somewhere https://files.somewhere.com/namada-snapshot.tar.gz
-tar -zcvf namada-snapshot.tar.gz
+wget -P $BASE_DIR/somewhere https://files.somewhere.com/namada-snapshot.tar.gz<br />
+tar -zcvf namada-snapshot.tar.gz<br />
 </p>
 
 #### Restart service
