@@ -16,25 +16,25 @@ export VALIDATOR_ALIAS="VALIDATOR MONIKER"<br />
 ## Run node as service
 sudo vi /etc/systemd/system/namadad.service
 <p style="background:black;color:white;padding:10px;border-radius:6px">
-[Unit]
-Description=namada
-After=network-online.target
+[Unit]<br />
+Description=namada<br />
+After=network-online.target<br />
 
-[Service]
-User=namadanet
-WorkingDirectory=/home/namadanet/.local/share/namada
-Environment="NAMADA_LOG=info"
-Environment="CMT_LOG_LEVEL=p2p:none,pex:error"
-Environment="NAMADA_CMT_STDOUT=true"
-ExecStart=/usr/local/bin/namada --base-dir=/home/namadanet/.local/share/namada node ledger run  
-StandardOutput=syslog
-StandardError=syslog
-Restart=on-failure
-RestartSec=3
-LimitNOFILE=65535
+[Service]<br />
+User=namadanet<br />
+WorkingDirectory=/home/namadanet/.local/share/namada<br />
+Environment="NAMADA_LOG=info"<br />
+Environment="CMT_LOG_LEVEL=p2p:none,pex:error"<br />
+Environment="NAMADA_CMT_STDOUT=true"<br />
+ExecStart=/usr/local/bin/namada --base-dir=/home/namadanet/.local/share/namada node ledger run<br />
+StandardOutput=syslog<br />
+StandardError=syslog<br />
+Restart=on-failure<br />
+RestartSec=3<br />
+LimitNOFILE=65535<br />
 
-[Install]
-WantedBy=multi-user.target
+[Install]<br />
+WantedBy=multi-user.target<br />
 </p>
 
 <p style="background:black;color:white;padding:10px;border-radius:6px">
