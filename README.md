@@ -2,7 +2,8 @@
 
 ## Recommend environments
 <p style="background:black;color:white;padding:10px;border-radius:6px">
-export PATH=$HOME/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/local/go/bin:$HOME/go/bin  
+export PATH=$HOME/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin
+export PATH=/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/local/go/bin:$HOME/go/bin
 export BASE_DIR=$HOME/.local/share/namada  
 export NAMADA_TAG="Namada Release Tag"    
 export TM_HASH=v0.1.4-abciplus  
@@ -43,6 +44,13 @@ sudo systemctl enable namadad
 sudo systemctl start namadad && sudo journalctl -u namadad -n 1000 -f
 </p>
 
+### Service commands
+<p style="background:black;color:white;padding:10px;border-radius:6px">
+sudo service namadad start  
+sudo service namadad status  
+sudo service namadad stop   
+sudo service namadad restart 
+</p>
 
 ## Node Services
 
