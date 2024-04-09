@@ -1,6 +1,6 @@
 # Namada services
 
-### Recommend environments
+## Recommend environments
 <p style="background:black;color:white;padding:10px;border-radius:6px">
 export PATH=$HOME/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin<br />
 export PATH=/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/local/go/bin:$HOME/go/bin<br />
@@ -13,7 +13,7 @@ export IP_PORT="PUBLIC IP:26656"<br />
 export VALIDATOR_ALIAS="VALIDATOR MONIKER"<br />
 </p>
 
-### Run node as service
+## Run node as service
 #### Edit service file
 sudo vi /etc/systemd/system/namadad.service
 <p style="background:black;color:white;padding:10px;border-radius:6px">
@@ -71,14 +71,21 @@ https://indexer.staking_power.com/
 https://files.somewhere.com/genesis.json
 </p>
 
-#### Seed:
+#### Add seed:
 <p style="background:black;color:white;padding:10px;border-radius:6px">
-tcp://ip:port
+seeds="tcp://ip:port<br />
+sed -i "s#^seeds *=.*#seeds = \"$seeds\"#;" $BASE_DIR/$CHAIN_ID/config.toml
 </p>
 
-#### Peer:
+#### Add peer:
 <p style="background:black;color:white;padding:10px;border-radius:6px">
-tcp://ip:port
+peers="tcp://ip:port"<br />
+sed -i "s#^persistent_peers *=.*#persistent_peers = \"$peers\"#;" $BASE_DIR/$CHAIN_ID/config.toml
+</p>
+
+#### Address book:
+<p style="background:black;color:white;padding:10px;border-radius:6px">
+wget -qO $BASE_DIR/$CHAIN_ID/cometbft/config/addrbook.json https://snapshots.theamsolutions.info/nam-addrbook.json
 </p>
 
 ### Snapshot:
@@ -100,15 +107,3 @@ tar -zcvf namada-snapshot.tar.gz<br />
 sudo systemctl restart namadad && sudo journalctl -u namada.service -fn 100 -o cat
 </p>
 
-<script>
-function copyToClipboard(element) {
-  var text = document.querySelector(element).innerText;
-  var elem = document.createElement("textarea");
-  document.body.appendChild(elem);
-  elem.value = text;
-  elem.select();
-  document.execCommand("copy");
-  document.body.removeChild(elem);
-  alert("Code copied to clipboard");
-}
-</script>
