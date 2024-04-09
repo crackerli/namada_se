@@ -1,6 +1,19 @@
 # Namada services
 
-## RPC, Peers, Seed, Addrbook, Genesis
+## Recommend environments
+<p style="background:black;color:white;padding:10px;border-radius:6px">
+export PATH=$HOME/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/local/go/bin:$HOME/go/bin  
+export BASE_DIR=$HOME/.local/share/namada  
+export NAMADA_TAG="Namada Release Tag"    
+export TM_HASH=v0.1.4-abciplus  
+export CHAIN_ID="public-testnet-15.0dacadb8d663"  
+export PUBLIC_IP="PUBLIC IP"
+export IP_PORT="PUBLIC IP:26656"  
+export VALIDATOR_ALIAS="VALIDATOR MONIKER"  
+</p>
+
+
+## Node Services
 
 #### Public RPC: 
 <p style="background:black;color:white;padding:10px;border-radius:6px">
@@ -27,7 +40,11 @@ tcp://ip:port
 tcp://ip:port
 </p>
 
-#### Snapshot:
+### Snapshot:
+#### Stop the service and reset the data
+sudo systemctl stop namada.service
+cp $HOME/.local/share/namada/shielded-expedition.88f17d1d14/cometbft/data/priv_validator_state.json $HOME/.local/share/namada/shielded-expedition.88f17d1d14/priv_validator_state.json.backup
+rm -rf $HOME/.local/share/namada/shielded-expedition.88f17d1d14/cometbft/data $HOME/.local/share/namada/shielded-expedition.88f17d1d14/db $HOME/.local/share/namada/shielded-expedition.88f17d1d14/wasm
 <p style="background:black;color:white;padding:10px;border-radius:6px">
 https://files.somewhere.com/namada-snapshot.tar.gz
 </p>
