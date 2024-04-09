@@ -38,18 +38,18 @@ WantedBy=multi-user.target<br />
 </p>
 
 <p style="background:black;color:white;padding:10px;border-radius:6px">
-sudo chmod 755 /etc/systemd/system/namadad.service  
-sudo systemctl daemon-reload  
-sudo systemctl enable namadad  
-sudo systemctl start namadad && sudo journalctl -u namadad -n 1000 -f
+sudo chmod 755 /etc/systemd/system/namadad.service<br />
+sudo systemctl daemon-reload<br />
+sudo systemctl enable namadad<br />
+sudo systemctl start namadad && sudo journalctl -u namadad -n 1000 -f<br />
 </p>
 
 ### Service commands
 <p style="background:black;color:white;padding:10px;border-radius:6px">
-sudo service namadad start  
-sudo service namadad status  
-sudo service namadad stop   
-sudo service namadad restart 
+sudo service namadad start<br />
+sudo service namadad status<br />
+sudo service namadad stop<br />
+sudo service namadad restart<br />
 </p>
 
 ## Node Services
