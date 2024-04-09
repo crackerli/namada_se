@@ -1,6 +1,6 @@
 # Namada services
 
-## Recommend environments
+### Recommend environments
 <p style="background:black;color:white;padding:10px;border-radius:6px">
 export PATH=$HOME/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin<br />
 export PATH=/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/local/go/bin:$HOME/go/bin<br />
@@ -13,7 +13,8 @@ export IP_PORT="PUBLIC IP:26656"<br />
 export VALIDATOR_ALIAS="VALIDATOR MONIKER"<br />
 </p>
 
-## Run node as service
+### Run node as service
+#### Edit service file
 sudo vi /etc/systemd/system/namadad.service
 <p style="background:black;color:white;padding:10px;border-radius:6px">
 [Unit]<br />
@@ -37,6 +38,7 @@ LimitNOFILE=65535<br />
 WantedBy=multi-user.target<br />
 </p>
 
+#### Enable and start service
 <p style="background:black;color:white;padding:10px;border-radius:6px">
 sudo chmod 755 /etc/systemd/system/namadad.service<br />
 sudo systemctl daemon-reload<br />
