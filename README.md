@@ -112,3 +112,18 @@ LimitNOFILE=65535
 WantedBy=multi-user.target
 EOF
 ```
+
+### Active service
+```
+sudo chmod 755 /etc/systemd/system/namadad.service
+sudo systemctl daemon-reload
+sudo systemctl enable namadad
+sudo systemctl start namadad && sudo journalctl -u namadad -n 1000 -f
+```
+
+### Service commands
+sudo service namadad start
+sudo service namadad status
+sudo service namadad stop
+sudo service namadad restart
+```
