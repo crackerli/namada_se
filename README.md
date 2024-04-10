@@ -3,29 +3,29 @@
 ## Infrastructures
 
 #### Public RPC: 
-<pre style="background:black;color:white"><code id="code_rpc">
+```
 https://namada-se.staking_power.com/
-</code></pre>
+```
 
 #### Indexer Service: 
-<pre style="background:black;color:white"><code id="code_indexer">
+```
 https://indexer.staking_power.com/
-</code></pre>
+```
 
 #### Seed:
-<pre style="background:black;color:white"><code id="code_seed">
+```
 tcp://ip:port
-</code></pre>
+```
 
 #### Peer:
-<pre style="background:black;color:white"><code id="code_peer">
+```
 tcp://ip:port
-</code></pre>
+```
 
 #### Snapshot:
-<pre style="background:black;color:white"><code id="code_snapshot">
+```
 https://files.somewhere.com/namada-snapshot.tar.gz
-</code></pre>
+```
 
 ## Validator Setup
 
