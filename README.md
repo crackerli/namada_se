@@ -24,7 +24,7 @@ tcp://e1e4f80f1a4738f3a3983369c35e3d3fe3369b3f@154.53.45.59:26656
 
 #### Address book:
 ```
-tcp://ip:port
+http://rpc.shieldedexpedition-mohismstake.site:12345/addrbook.json
 ```
 
 #### Snapshot:
