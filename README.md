@@ -1,6 +1,6 @@
-# Namada services
+# Namada infrastructure & Validator instructions
 
-## RPC, Peers, Seed, Addrbook, Genesis
+## Infrastructures
 
 #### Public RPC: 
 <pre style="background:black;color:white"><code id="code_rpc">
@@ -10,11 +10,6 @@ https://namada-se.staking_power.com/
 #### Indexer Service: 
 <pre style="background:black;color:white"><code id="code_indexer">
 https://indexer.staking_power.com/
-</code></pre>
-
-#### Genesis:
-<pre style="background:black;color:white"><code id="code_genesis">
-https://files.somewhere.com/genesis.json
 </code></pre>
 
 #### Seed:
