@@ -4,12 +4,12 @@
 
 #### Public RPC: 
 ```
-https://namada-se.staking_power.com/
+[https://rpc.shieldedexpedition-mohismstake.site/](https://rpc.shieldedexpedition-mohismstake.site/)
 ```
 
 #### Indexer Service: 
 ```
-https://indexer.staking_power.com/
+[https://indexer.shieldedexpedition-mohismstake.site/block/last](https://indexer.shieldedexpedition-mohismstake.site/block/last)
 ```
 
 #### Seed:
