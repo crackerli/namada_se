@@ -4,12 +4,12 @@
 
 #### Public RPC: 
 ```
-[https://rpc.shieldedexpedition-mohismstake.site/](https://rpc.shieldedexpedition-mohismstake.site/)
+https://rpc.shieldedexpedition-mohismstake.site/
 ```
 
 #### Indexer Service: 
 ```
-[https://indexer.shieldedexpedition-mohismstake.site/block/last](https://indexer.shieldedexpedition-mohismstake.site/block/last)
+https://indexer.shieldedexpedition-mohismstake.site/block/last
 ```
 
 #### Seed:
@@ -24,7 +24,7 @@ tcp://ip:port
 
 #### Snapshot:
 ```
-https://files.somewhere.com/namada-snapshot.tar.gz
+http://rpc.shieldedexpedition-mohismstake.site:12345/snapshot_testnetse.tar.gz
 ```
 
 ## Validator Setup
