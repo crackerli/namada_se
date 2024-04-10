@@ -92,9 +92,30 @@ namadac unjail-validator --validator  "<Validator address>"
 namadac bonded-stake
 ```
 
-#### Claim rewards
+#### Deactivate validator
 ```
-namadac claim-rewards --validator "<Validator address>"
+namadac deactivate-validator --validator "VALIDATOR"
+```
+
+#### Reactivate validator
+```
+namadac reactivate-validator --validator "VALIDATOR"
+```
+
+#### Query validator metadata
+```
+namadac validator-metadata --validator "VALIDATOR"
+```
+
+#### Change validator metadata
+```
+namadac change-metadata \
+  --validator "VALIDATOR" \
+  --website "WEBSITE_URL" \
+  --description "DESCRIPTION" \
+  --avatar "LINK_TO_AVATAR" \
+  --discord-handle "DISCORD_HANDLE" \
+  --email "EMAIL"
 ```
 
 ## Run node as Service
