@@ -71,10 +71,19 @@ namadac  bond \
 ## Validator management
 
 #### validator consensus state
+```
 namadac validator-state --validator "<Validator address>"
+```
 
 #### unjail validator
+```
 namadac unjail-validator --validator  "<Validator address>"
+```
 
 #### claim rewards
+```
 namadac claim-rewards --validator "<Validator address>"
+```
+
+## Run node as Service
+sudo tee /etc/systemd/system/namadad.service << EOF
