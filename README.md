@@ -1,4 +1,4 @@
-# Namada infrastructure & Validator instructions
+# Namada infrastructure
 
 ## Infrastructures
 
