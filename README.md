@@ -14,12 +14,12 @@ https://indexer.shieldedexpedition-mohismstake.site/block/last
 
 #### Seed:
 ```
-tcp://ip:port
+tcp://e1e4f80f1a4738f3a3983369c35e3d3fe3369b3f@154.53.45.59:26656
 ```
 
 #### Peer:
 ```
-tcp://ip:port
+tcp://e1e4f80f1a4738f3a3983369c35e3d3fe3369b3f@154.53.45.59:26656
 ```
 
 #### Address book:
