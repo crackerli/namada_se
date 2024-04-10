@@ -64,6 +64,17 @@ namadac  init-validator \
 ```
 namadac  bond \
  --source "${KEY_NAME}" \
- --validator "<Validator address tham1...>" \
+ --validator "<Validator address>" \
  --amount 1000 \
 ```
+
+## Validator management
+
+#### validator consensus state
+namadac validator-state --validator "<Validator address>"
+
+#### unjail validator
+namadac unjail-validator --validator  "<Validator address>"
+
+#### claim rewards
+namadac claim-rewards --validator "<Validator address>"
