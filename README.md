@@ -36,56 +36,53 @@ http://rpc.shieldedexpedition-mohismstake.site:12345/snapshot_testnetse.tar.gz
 
 #### Recover key from registered account
 ```
-namadaw derive --alias "${ALIAS}"
+namadaw derive --alias "ALIAS"
 ```
 
-#### check key address
+#### Check key address
 ```
-namadaw find --alias "${ALIAS}"
-```
-
-#### check balance well
-```
-namadac balance --owner "${ALIAS}"
+namadaw find --alias "ALIAS"
 ```
 
-#### find validator key
+#### Check balance well
+```
+namadac balance --owner "ALIAS"
+```
+
+#### Initialize validator
+```
+namadac init-validator \
+ --alias "VAL_NAME" \
+ --account-keys "KEY_NAME" \
+ --signing-keys "KEY_NAME" \
+ --commission-rate 0.1 \
+ --max-commission-rate-change 0.1 \
+ --email "EMAIL" \
+```
+
+#### Find validator key
 ```
 namadac find-validator --tm-address=$(curl -s localhost:26657/status | jq -r .result.validator_info.address)
 ```
 
-#### initialize validator
+#### Bond tokens to your validator
 ```
-namadac  init-validator \
- --alias "${VAL_NAME}" \
- --account-keys "${KEY_NAME}" \
- --signing-keys "${KEY_NAME}" \
- --commission-rate 0.1 \
- --max-commission-rate-change 0.1 \
- --email "${EMAIL}" \
-```
-
-#### bond tokens to your validator
-```
-namadac  bond \
- --source "${KEY_NAME}" \
- --validator "<Validator address>" \
- --amount 1000 \
+namadac bond --source "DELEGATOR" --validator "<Validator address>" --amount AMOUNT
 ```
 
 ## Validator management
 
-#### validator consensus state
+#### Validator consensus state
 ```
 namadac validator-state --validator "<Validator address>"
 ```
 
-#### unjail validator
+#### Unjail validator
 ```
 namadac unjail-validator --validator  "<Validator address>"
 ```
 
-#### claim rewards
+#### Claim rewards
 ```
 namadac claim-rewards --validator "<Validator address>"
 ```
