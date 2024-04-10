@@ -44,7 +44,7 @@ namadaw derive --alias "ALIAS"
 namadaw find --alias "ALIAS"
 ```
 
-#### Check balance well
+#### Check balance
 ```
 namadac balance --owner "ALIAS"
 ```
