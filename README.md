@@ -86,4 +86,24 @@ namadac claim-rewards --validator "<Validator address>"
 ```
 
 ## Run node as Service
+```
 sudo tee /etc/systemd/system/namadad.service << EOF
+[Unit]
+Description=Namada Node
+After=network.target
+[Service]
+User=$USER
+WorkingDirectory=$HOME/.local/share/namada
+Type=simple
+ExecStart=/usr/local/bin/namada --base-dir=$HOME/.local/share/namada node ledger run
+Environment=NAMADA_CMT_STDOUT=true
+Environment=TM_LOG_LEVEL=p2p:none,pex:error
+RemainAfterExit=no
+Restart=on-failure
+RestartSec=10s
+LimitNOFILE=65535
+
+[Install]
+WantedBy=multi-user.target
+EOF
+```
