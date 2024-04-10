@@ -65,6 +65,11 @@ namadac init-validator \
 namadac find-validator --tm-address=$(curl -s localhost:26657/status | jq -r .result.validator_info.address)
 ```
 
+#### Self Bond
+```
+namada client bond --validator "VALIDATOR" --amount "AMOUNT"
+```
+
 #### Bond tokens to your validator
 ```
 namadac bond --source "DELEGATOR" --validator "<Validator address>" --amount AMOUNT
@@ -80,6 +85,11 @@ namadac validator-state --validator "<Validator address>"
 #### Unjail validator
 ```
 namadac unjail-validator --validator  "<Validator address>"
+```
+
+#### Query a validator's bonded-stake
+```
+namadac bonded-stake
 ```
 
 #### Claim rewards
