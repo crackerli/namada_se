@@ -22,6 +22,11 @@ tcp://ip:port
 tcp://ip:port
 ```
 
+#### Address book:
+```
+tcp://ip:port
+```
+
 #### Snapshot:
 ```
 http://rpc.shieldedexpedition-mohismstake.site:12345/snapshot_testnetse.tar.gz
